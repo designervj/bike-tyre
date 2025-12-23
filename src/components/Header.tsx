@@ -379,7 +379,7 @@ export default function Header() {
     ? "bg-white text-black shadow-[0_10px_30px_rgba(15,23,42,0.18)]"
     : isScrolled
     ? "bg-black/80 text-white shadow-lg backdrop-blur"
-    : "bg-black/20 text-white";
+    : "bg-black/80 text-white";
 
   const handleDesktopClick = (item: MegaCategory | "Home") => {
     if (item === "Home") {

@@ -7,6 +7,7 @@ import {
   Maximize2,
   ShoppingCart,
 } from "lucide-react";
+import { FaPlus, FaRegWindowMinimize } from "react-icons/fa";
 
 // ---------------- DATA & TYPES ----------------
 
@@ -185,12 +186,12 @@ const PrettyAccordion: React.FC<PrettyAccordionProps> = ({
         className="w-full flex justify-between items-center py-4 text-left group"
         onClick={() => setOpen((o) => !o)}
       >
-        <span className="font-bold text-gray-900 group-hover:text-black text-xl">
+        <span className="font-semibold text-gray-900 group-hover:text-black text-xl">
           {title}
         </span>
-        <span className="text-xl font-light text-gray-500 group-hover:text-black">
-          {open ? "−" : "+"}
-        </span>
+      <span className="text-md font-light text-gray-500 group-hover:text-black">
+        {open ? <FaRegWindowMinimize /> : <FaPlus />}
+      </span>
       </button>
       <div
         // Changed max-h to a larger value for smoother transition and more content
@@ -571,7 +572,7 @@ const ProductGravelPage = ({ attributeValues, image, variants }: any) => {
             </div>
 
             {/* CONFIGURATION PANEL (Made slightly sticky on mobile for immediate access to CTA) */}
-            <div className="bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-gray-100 p-6 md:p-8 relative  bottom-0 z-20 lg:static lg:p-6 lg:shadow-none lg:border-none lg:bg-transparent">
+            <div className="bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-gray-100 p-6 md:p-0 relative  bottom-0 z-20 lg:static lg:pb-6 lg:shadow-none lg:border-none lg:bg-transparent">
               {/* Decorative accent for the sticky bar on mobile */}
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 to-yellow-300 rounded-t-xl lg:hidden" />
 

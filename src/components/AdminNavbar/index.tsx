@@ -84,6 +84,20 @@ export const AdminNavbar = async (props: ServerProps) => {
 
   return (
     <NavWrapper baseClass={baseClass}>
+
+    
+          <div className="flex-shrink-0 bg-[#F9FAFB] pb-4 ">
+
+           <div className="relative h-10 w-40"> 
+             <img
+               src="/assets/img/Goodyear-Bicyle-Logo-Black-logo.png" 
+               alt="Goodyear"
+               className="object-contain object-left"
+        
+             />
+           </div>
+        </div>
+
       <nav className={`${baseClass}__wrap`}>
         {RenderServerComponent({
           clientProps: {
@@ -127,6 +141,7 @@ export const AdminNavbar = async (props: ServerProps) => {
           <NavHamburger baseClass={baseClass} />
         </div>
       </div>
+
     </NavWrapper>
   );
 };

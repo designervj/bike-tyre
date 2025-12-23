@@ -88,10 +88,16 @@ export const LoginForm = () => {
             {t("forgot-password")}
           </Link>
         </div>
-        <Button type="submit" variant="tailwind">
+        {/* <Button type="submit" variant="tailwind">
+          {t("submit")}
+        </Button> */}
+          <Button type="submit" variant="tailwind" className=" px-5 sm:px-6 py-2.5 sm:py-3 rounded-md shadow font-semibold bg-[#FFD100] hover:bg-[#fff] hover:border hover:border-black hover:text-[#fff] text-black transition   text-sm sm:text-base   ">
           {t("submit")}
         </Button>
       </form>
     </Form>
   );
 };
+
+
+

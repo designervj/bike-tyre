@@ -63,9 +63,9 @@ const ProductSection: React.FC = () => {
         {/* GRID: left promo + right products */}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* LEFT PROMO CARD */}
-          <div className="relative overflow-hidden rounded-3xl bg-black text-white h-[460px] lg:h-[520px] lg:row-span-2 lg:col-span-2">
+          <div className="relative overflow-hidden rounded-3xl bg-black text-white h-[460px] lg:h-[670px] lg:row-span-2 lg:col-span-2">
             <img
-              src="https://goodyear.creativeconsult.co.in/wp-content/uploads/2025/11/Wrangler-Spain-2024-1028.jpg"
+              src="https://www.goodyearbike.com/wp-content/uploads/2024/06/Wingfoot-Shoot-1020.jpg"
               alt="Promo"
               className="absolute inset-0 w-full h-full object-cover"
             />

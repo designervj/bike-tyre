@@ -10,7 +10,7 @@ export const NavWrapper = (props: { baseClass?: string; children: ReactNode }) =
 
   return (
     <aside
-      className={[
+      className={[ 
         baseClass,
         navOpen && `${baseClass}--nav-open`,
         shouldAnimate && `${baseClass}--nav-animate`,
@@ -19,6 +19,7 @@ export const NavWrapper = (props: { baseClass?: string; children: ReactNode }) =
         .filter(Boolean)
         .join(" ")}
       inert={!navOpen ? true : undefined}
+      
     >
       <div className={`${baseClass}__scroll`} ref={navRef}>
         {children}

@@ -15,7 +15,7 @@ import { IoMdClose } from "react-icons/io";
 /* TYPES                                   */
 /* -------------------------------------------------------------------------- */
 
-type MegaCategory = "ROAD" | "GRAVEL" | "MOUNTAIN" | "COMPANY" | null;
+type MegaCategory = "ROAD" | "URBAN" | "GRAVEL" | "MOUNTAIN" | "COMPANY" | null;
 
 type Section = {
   title: string;
@@ -102,19 +102,18 @@ const megaConfigs: Record<Exclude<MegaCategory, null>, MegaConfig> = {
     },
   },
 
-  GRAVEL: {
-    title: "GRAVEL",
-    href: "/tires/gravel",
+   URBAN: {
+    title: "URBAN",
+    href: "/tires/urban",
     columns: [
       {
         heading: "All-Road / Adventure",
         sections: [
           {
-            title: "All-Road & Adventure",
+            title: "1mm Protection",
             links: [
-              { label: "Connector", href: "/tires/gravel/connector" },
-              { label: "Connector Speed", href: "/tires/gravel/connector-speed" },
-              { label: "County", href: "/tires/gravel/county" },
+              { label: "Transit Speed", href: "/tires/urban/transit-speed" },
+      
             ],
           },
         ],
@@ -123,20 +122,23 @@ const megaConfigs: Record<Exclude<MegaCategory, null>, MegaConfig> = {
         heading: "Performance",
         sections: [
           {
-            title: "Performance",
+            title: "3mm Protection",
             links: [
-              { label: "Vector Gravel", href: "/tires/gravel/vector-gravel" },
-              { label: "Vector Road+ Gravel", href: "/tires/gravel/vector-road-plus" },
+              { label: "Transit Tour", href: "/tires/urban/transit-tour" },
+              { label: "Transit SUV", href: "/tires/urban/transit-suv" },
             ],
-          },
+         },
         ],
       },
       {
         heading: "Durability",
         sections: [
           {
-            title: "Durability",
-            links: [{ label: "Peak", href: "/tires/gravel/peak" }],
+            title: "5mm Protection",
+            links: [
+              { label: "Transit Tour Plus", href: "/tires/urban/transit-tour-plus" },
+            ],
+            
           },
         ],
       },
@@ -144,47 +146,112 @@ const megaConfigs: Record<Exclude<MegaCategory, null>, MegaConfig> = {
     resources: {
       title: "Resources",
       links: [
-        { label: "Gravel Tire Pressure Guide", href: "/resources/gravel-pressure" },
-        { label: "Tubeless Setup Tips", href: "/resources/tubeless-setup" },
-        { label: "Adventure Ride Prep", href: "/resources/adventure-prep" },
+        { label: "Tire Pressure Calculator", href: "//tire-pressure-calculator/" },
+        { label: "TLR Installation Guide", href: "/resources/bicycle-tire-installation" },
+        { label: "Transits Explained", href: "/resources/transits-explained" },
       ],
     },
   },
 
-  MOUNTAIN: {
+  GRAVEL: {
+    title: "GRAVEL",
+    href: "/tires/gravel",
+    columns: [
+      {
+        heading: "All-Road / Adventure",
+        sections: [
+          {
+            title: "Mixed Terrain",
+            links: [
+              { label: "Connector Slick", href: "/tires/gravel/connector-slick" },
+              { label: "Connector Speed", href: "/tires/gravel/connector-speed" },
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Performance",
+        sections: [
+          {
+            title: "Off-Road",
+            links: [
+              { label: "Connector Inter", href: "/tires/gravel/connector-inter" },
+              { label: "Peak", href: "/tires/gravel/peak" },
+            ],
+         },
+        ],
+      },
+      
+      {
+        heading: "Durability",
+        sections: [
+          {
+            title: "Fitment Series",
+            links: [
+              { label: "XPLR Slick", href: "/tires/gravel/xplr-slick" },
+              { label: "XPLR Inter", href: "/tires/gravel/xplr-inter" },
+
+            ],
+            
+          },
+        ],
+      },
+    ],
+    resources: {
+      title: "Resources",
+      links: [
+        { label: "Tire Pressure Calculator", href: "//tire-pressure-calculator/" },
+        { label: "TLR Installation Guide", href: "/resources/bicycle-tire-installation" },
+        { label: "Introducing Connector", href: "/resources/connector" },
+        { label: "Introducing XPLR", href: "/resources/zipp-x-goodyear-xplr" },
+        { label: "What is Fitment Series?", href: "/resources/zipp-x-goodyear-vector-r" },
+
+
+      ],
+    },
+  },
+
+MOUNTAIN: {
     title: "MOUNTAIN",
     href: "/tires/mountain",
     columns: [
       {
-        heading: "Trail / All-Mountain",
+        heading: "Trail/Enduro/Downhill",
         sections: [
           {
-            title: "Trail / All-Mountain",
+            title: "Trail/Enduro/Downhill",
             links: [
-              { label: "Newton", href: "/tires/mountain/newton" },
-              { label: "Newton ST", href: "/tires/mountain/newton-st" },
-            ],
-          },
-        ],
-      },
-      {
-        heading: "Enduro / DH",
-        sections: [
-          {
-            title: "Enduro / DH",
-            links: [
+              { label: "Escape Inter", href: "/tires/mountain/escape-inter" },
+              { label: "Escape Max", href: "/tires/mountain/escape-max" },
+              { label: "Wrangler MTF", href: "/tires/mountain/wrangler-mtf" },
+              { label: "Wrangler MTR", href: "/tires/mountain/wrangler-mtr" },
+              { label: "Newton MTF", href: "/tires/mountain/newton-mtf" },
               { label: "Newton MTR", href: "/tires/mountain/newton-mtr" },
-              { label: "Newton DH", href: "/tires/mountain/newton-dh" },
             ],
           },
         ],
       },
       {
-        heading: "XC / Down-Country",
+        heading: "Cross Country",
         sections: [
           {
-            title: "XC / Down-Country",
-            links: [{ label: "Peak All-Terrain", href: "/tires/mountain/peak-all-terrain" }],
+            title: "Cross Country",
+            links: [
+              { label: "Peak SL", href: "/tires/mountain/peak-sl" },
+              { label: "Peak", href: "/tires/mountain/peak" },
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Dirt/Park",
+        sections: [
+          {
+            title: "Dirt/Park",
+            links: [
+              { label: "Wingfoot Dirt", href: "/tires/mountain/wingfoot-dirt" },
+              { label: "Wingfoot Park", href: "/tires/mountain/wingfoot-park" },
+            ],
           },
         ],
       },
@@ -192,64 +259,70 @@ const megaConfigs: Record<Exclude<MegaCategory, null>, MegaConfig> = {
     resources: {
       title: "Resources",
       links: [
-        { label: "Trail Tire Selector", href: "/resources/trail-selector" },
-        { label: "Tube vs Tubeless", href: "/resources/tube-vs-tubeless" },
-        { label: "How to Read Sidewall Markings", href: "/resources/sidewall-markings" },
+        { label: "Tire Pressure Calculator", href: "/resources/tire-pressure-calculator" },
+        { label: "TLR Installation Guide", href: "/resources/tlr-installation-guide" },
+        { label: "Introducing Escape", href: "/resources/introducing-escape" },
+        { label: "Introducing Wrangler", href: "/resources/introducing-wrangler" },
+        { label: "Introducing Newton", href: "/resources/introducing-newton" },
       ],
     },
   },
 
-  COMPANY: {
-    title: "COMPANY",
-    href: "/company",
-    columns: [
-      {
-        heading: "About",
-        sections: [
-          {
-            title: "About Goodyear Bicycle Tires",
-            links: [
-              { label: "Our Story", href: "/company/our-story" },
-              { label: "Technology", href: "/company/technology" },
-              { label: "Sustainability", href: "/company/sustainability" },
-            ],
-          },
-        ],
-      },
-      {
-        heading: "Support",
-        sections: [
-          {
-            title: "Support",
-            links: [
-              { label: "Warranty", href: "/support/warranty" },
-              { label: "FAQ", href: "/support/faq" },
-            ],
-          },
-        ],
-      },
-      {
-        heading: "Dealer",
-        sections: [
-          {
-            title: "Dealer",
-            links: [
-              { label: "Become a Dealer", href: "/dealer/become-a-dealer" },
-              { label: "Distributor Login", href: "/dealer/login" },
-            ],
-          },
-        ],
-      },
-    ],
-    resources: {
-      title: "Resources",
-      links: [
-        { label: "Contact Us", href: "/contact" },
-        { label: "Media Kit", href: "/company/media-kit" },
-        { label: "Careers", href: "/company/careers" },
+COMPANY: {
+  title: "COMPANY",
+  href: "/company",
+  columns: [
+    {
+      heading: "Goodyear Bike",
+      sections: [
+        {
+          title: "Goodyear Bike",
+          links: [
+            { label: "About", href: "/company/about" },
+            { label: "Stories (Blog)", href: "/blog" },
+            { label: "Contact", href: "/contact" },
+            { label: "OEM Contact", href: "/company/oem-contact" },
+          ],
+        },
       ],
     },
+    {
+      heading: "Where To Buy",
+      sections: [
+        {
+          title: "Where To Buy",
+          links: [
+            { label: "Global Dealer Locator", href: "/dealers" },
+            { label: "Online Shop - US", href: "/shop/us" },
+            { label: "Online Shop - UK", href: "/shop/uk" },
+          ],
+        },
+      ],
+    },
+    {
+      heading: "Team & Ambassadors",
+      sections: [
+        {
+          title: "Team & Ambassadors",
+          links: [
+            { label: "Wingfoot Alliance", href: "/team/wingfoot-alliance" },
+          ],
+        },
+      ],
+    },
+  ],
+  resources: {
+    title: "Resources",
+    links: [
+      { label: "Tire Pressure Calculator", href: "/resources/tire-pressure" },
+      { label: "TLR Installation Guide", href: "/resources/tlr-installation" },
+      { label: "Distributors", href: "/resources/distributors" },
+      { label: "T&C's", href: "/terms" },
+      { label: "Privacy Policy", href: "/privacy-policy" },
+    ],
   },
+},
+
 };
 
 /* -------------------------------------------------------------------------- */
@@ -263,7 +336,7 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   // Added 'SHOP' to the main menu items for mobile/desktop visibility
-  const menuItems: (MegaCategory | "Home")[] = ["Home", "ROAD", "GRAVEL", "MOUNTAIN", "COMPANY"];
+  const menuItems: (MegaCategory | "Home")[] = [ "ROAD", "URBAN", "GRAVEL", "MOUNTAIN", "COMPANY"];
   const isMegaOpen = !!openMega;
 
   const activeConfig = useMemo(
@@ -334,7 +407,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className={`hidden lg:flex items-center gap-10 font-medium ${isMegaOpen ? "text-black" : "text-white"}`}>
+          <nav className={`hidden lg:flex items-center gap-10 font-semibold text-lg ${isMegaOpen ? "text-black" : "text-white"}`}>
             {menuItems.map((item) => {
               const isHome = item === "Home";
               const isOpen = item === openMega;
@@ -487,7 +560,7 @@ function MegaMenu({ config, onClose }: { config: MegaConfig; onClose: () => void
 
           {/* columns */}
           {config.columns.map((col, idx) => (
-            <div key={idx} className="space-y-6 text-sm">
+            <div key={idx} className="space-y-6 text-md">
               {/* NOTE: Column heading is not used in the desktop view currently. The section titles are. */}
               {col.sections.map((section, si) => (
                 <div key={si}>
@@ -539,7 +612,7 @@ function MenuLink({ label, href, onClose }: { label: string; href: string; onClo
       <Link
         href={href}
         onClick={onClose} // Close on click
-        className="inline-flex items-center text-[14px] text-neutral-700 hover:text-black transition-colors"
+        className="inline-flex items-center text-[16px] text-neutral-700 hover:text-black transition-colors"
       >
         {label}
       </Link>
@@ -558,10 +631,10 @@ function MobileMenu({
   onClose: () => void;
   configs: Record<Exclude<MegaCategory, null>, MegaConfig>;
 }) {
-  // Fix: Set initial state to null, or a default non-category state for a cleaner open
   const [open, setOpen] = useState<Exclude<MegaCategory, null> | null>(null);
 
-  const cats: Exclude<MegaCategory, null>[] = ["ROAD", "GRAVEL", "MOUNTAIN", "COMPANY"];
+  // ✅ Desktop same items on Mobile (include URBAN too)
+  const cats: Exclude<MegaCategory, null>[] = ["ROAD", "URBAN", "GRAVEL", "MOUNTAIN", "COMPANY"];
 
   const toggleCategory = (category: Exclude<MegaCategory, null>) => {
     setOpen((prev) => (prev === category ? null : category));
@@ -584,7 +657,7 @@ function MobileMenu({
 
         <div className="flex items-center justify-center">
           <Image
-            src={LOGO_BLACK} 
+            src={LOGO_BLACK}
             alt="Goodyear Bicycle Tires"
             width={170}
             height={44}
@@ -595,17 +668,9 @@ function MobileMenu({
 
         <div className="w-10 h-10" />
       </div>
+
       
-      {/* Added 'Home' link at the top of the list */}
-      <div className="px-6 pt-4 border-b border-neutral-200/80">
-        <Link 
-          href="/" 
-          onClick={onClose}
-          className="block py-4 text-[22px] font-semibold tracking-wide text-[#FFD100]"
-        >
-          Home
-        </Link>
-      </div>
+     
 
       {/* Content */}
       <div className="flex-1 overflow-y-auto px-6 pb-10">
@@ -617,36 +682,28 @@ function MobileMenu({
             <div key={c} className="border-b border-neutral-200/80 py-6">
               <button
                 type="button"
-                // Fix: Correct toggle logic
-                onClick={() => toggleCategory(c)} 
+                onClick={() => toggleCategory(c)}
                 className="w-full flex items-center justify-between text-left"
               >
                 <span className="text-[22px] font-semibold tracking-wide text-neutral-800">
                   {cfg.title}
                 </span>
-                <ChevronDownIcon 
-                  className={`w-5 h-5 transition-transform duration-200 text-neutral-500 ${expanded ? "rotate-180" : ""}`} 
+                <ChevronDownIcon
+                  className={`w-5 h-5 transition-transform duration-200 text-neutral-500 ${
+                    expanded ? "rotate-180" : ""
+                  }`}
                 />
               </button>
 
               {expanded && (
                 <div className="mt-5 space-y-8 transition-all duration-300">
-                  
-                  {/* Category Landing Link (View X ->) */}
-                  <Link
-                    href={cfg.href}
-                    onClick={onClose}
-                    className="inline-flex items-center gap-2 text-[15px] font-semibold text-black hover:text-[#FFD100] transition-colors"
-                  >
-                    View All {cfg.title} <ArrowRightIcon className="w-4 h-4" />
-                  </Link>
+                  {/* Category Landing Link */}
+              
 
-                  {/* big list (tires/pages) */}
+                  {/* Products (Flatten all links) */}
                   <div className="space-y-3">
-                    <p className="font-bold text-[15px] text-black">
-                      Products
-                    </p>
-                    {/* Flatten all links in this category */}
+                    <h5 className="font-semibold text-[15px] text-black">Products</h5>
+
                     {cfg.columns
                       .flatMap((col) => col.sections)
                       .flatMap((sec) => sec.links)
@@ -664,9 +721,7 @@ function MobileMenu({
 
                   {/* Resources */}
                   <div>
-                    <p className="font-bold text-[15px] text-black">
-                      {cfg.resources.title}
-                    </p>
+                    <h5 className="font-semibold text-[15px] text-black">{cfg.resources.title}</h5>
                     <div className="mt-3 space-y-3">
                       {cfg.resources.links.map((l) => (
                         <Link
@@ -680,22 +735,31 @@ function MobileMenu({
                       ))}
                     </div>
                   </div>
+
+                      <Link
+                    href={cfg.href}
+                    onClick={onClose}
+                    className="inline-flex items-center gap-2 text-[15px] font-semibold text-black hover:text-[#FFD100] transition-colors"
+                  >
+                    View All {cfg.title} <ArrowRightIcon className="w-4 h-4" />
+                  </Link>
+                  
                 </div>
               )}
             </div>
           );
         })}
       </div>
-      
-      {/* SHOP link added to the bottom for clear visibility */}
+
+      {/* ✅ SHOP button at bottom */}
       <div className="px-6 py-4 border-t border-neutral-200/80">
-          <Link 
-            href="/shop" 
-            onClick={onClose}
-            className="block py-3 text-center text-[18px] font-bold tracking-wide bg-[#FFD100] text-black rounded-lg hover:bg-yellow-500 transition-colors"
-          >
-            SHOP
-          </Link>
+        <Link
+          href="/shop"
+          onClick={onClose}
+          className="block py-3 text-center text-[18px] font-bold tracking-wide bg-[#FFD100] text-black rounded-lg hover:bg-yellow-500 transition-colors"
+        >
+          SHOP
+        </Link>
       </div>
     </div>
   );

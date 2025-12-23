@@ -60,6 +60,7 @@ export default buildConfig({
     },
     components: {
       afterLogin: ["@/components/AdminResetPassword#AdminResetPassword"],
+      // beforeLogin: ["@/components/(ecommerce)/AdminLogin#AdminLogin"],
       graphics: {
         // Identifiable Logo
         Logo: "@/components/AdminLogoBig/AdminLogoBig#AdminLogoBig",
@@ -70,11 +71,11 @@ export default buildConfig({
         path: "@/components/AdminNavbar#AdminNavbar",
       },
       // beforeDashboard: ["@/components/BeforeDashboard#BeforeDashboard"],
-      // views: {
-      //   dashboard: {
-      //     Component: "@/components/(ecommerce)/AdminDashboard#AdminDashboard",
-      //   },
-      // },
+      views: {
+        dashboard: {
+          Component: "@/components/(ecommerce)/AdminDashboard#AdminDashboard",
+        },
+      },
       beforeNavLinks: [
         "@/components/(ecommerce)/AdminDashboardNavLink#AdminDashboardNavLink",
         // "@/components/AdminLanguageSelector#AdminLanguageSelector",
@@ -88,7 +89,7 @@ export default buildConfig({
       icons: [
         {
           type: "image/svg+xml",
-          url: "/favicon.svg",
+          url: "/favicon-goodyear.png",
           rel: "icon",
         },
       ],

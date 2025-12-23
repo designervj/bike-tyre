@@ -90,7 +90,7 @@ const products = [
 ];
 
 export default function FeaturedWorks() {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const [activeCat, setActiveCat] = useState("All Tires");
 
   return (

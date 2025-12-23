@@ -54,8 +54,9 @@ export default async function RootLayout({
     >
       <head>
         {/* <InitTheme /> */}
-        <link href="/favicon.ico" rel="icon" sizes="32x32" />
-        <link href="/favicon.svg" rel="icon" type="image/svg+xml" />
+                <link href="/assets/img/Goodyear-Bicyle-Tires-Yellow.png" rel="icon" type="image/png" />
+
+        <link href="/assets/img/Goodyear-Bicyle-Tires-Yellow.png" rel="icon" type="image/png" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" />

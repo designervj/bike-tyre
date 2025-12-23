@@ -130,7 +130,7 @@ export const NavClient = ({ groups, navPreferences }: Props) => {
               return (
                 <LinkWithDefault
                   className={[
-                    `${baseClass}__link twp flex items-center py-2 hover:bg-black hover:rounded-[4px] hover:text-white`,
+                    `${baseClass}__link twp flex items-center py-2  hover:bg-black hover:rounded-[4px] hover:text-white`,
                     activeCollection && `active`,
                   ]
                     .filter(Boolean)

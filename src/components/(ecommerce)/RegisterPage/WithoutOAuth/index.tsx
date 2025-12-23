@@ -9,7 +9,7 @@ export const RegisterPageWithoutOAuth = () => {
   const t = useTranslations("RegisterForm");
   return (
     <main className="flex h-full flex-1 flex-col items-center justify-center bg-gray-50">
-      <div className="container flex w-full flex-col items-center justify-center py-12 sm:px-6 lg:px-8">
+      <div className="container flex w-full flex-col items-center justify-center py-12 sm:px-6 lg:px-8 ">
         <div className="sm:mx-auto sm:w-full sm:max-w-md">
           <Image
             alt="Mandala Software House"

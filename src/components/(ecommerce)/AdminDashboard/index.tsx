@@ -82,7 +82,7 @@ export const AdminDashboard = async (props: DashboardViewServerProps) => {
 
   return (
     <>
-      <main className="gutter--left gutter--right dashboard__wrap">
+      <main className="gutter--left gutter--right dashboard__wrap ">
         {beforeDashboard &&
           RenderServerComponent({
             Component: beforeDashboard,
